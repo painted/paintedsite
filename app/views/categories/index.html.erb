@@ -1,1 +1,8 @@
-No categories yet
+<% if @categories.any? %>
+	<% @categories.each do |category| %>
+		<%= category.title %>
+		<%= category.description %>
+	<% end %>
+<% else %>
+	No categories yet
+<% end %>
