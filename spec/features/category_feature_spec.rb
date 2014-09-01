@@ -16,3 +16,15 @@ describe 'categories listing page' do
 		end
 	end
 end
+
+describe 'category input form' do 
+	it 'adds the category to the home page' do 
+		visit '/categories/new'
+		fill_in 'Title', with: 'Bio'
+		fill_in 'Description', with: 'Lorem Ipsum'
+		click_button 'Submit'
+		expect(current_path).to eq categories_path
+		expect(page).to have_content 'Bio'
+		expect(page).to have_content 'Lorem Ipsum'
+	end
+end
