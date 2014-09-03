@@ -1,6 +1,6 @@
 <% if @categories.any? %>
 	<% @categories.each do |category| %>
-		<%= image_tag category.image.url, class: 'uploaded-pic' %>
+		<%= image_tag category.image.url(:thumb), class: 'uploaded-pic' %><br>
 		<%= category.title %>
 		<%= category.description %>
 	<% end %>

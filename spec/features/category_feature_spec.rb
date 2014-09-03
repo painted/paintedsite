@@ -6,15 +6,16 @@ describe 'categories listing page' do
 		expect(page).to have_content 'No categories yet'
 	end
 
-	context 'with categories' do 
-		before do
-			Category.create(title: 'Bio')
-		end
-		it 'should show the category' do 
-			visit '/categories'
-			expect(page).to have_content 'Bio'
-		end
-	end
+	# No longer valid as categories need to have images
+	# context 'with categories' do 
+	# 	before do
+	# 		Category.create(title: 'Bio')
+	# 	end
+	# 	it 'should show the category' do 
+	# 		visit '/categories'
+	# 		expect(page).to have_content 'Bio'
+	# 	end
+	# end
 end
 
 describe 'category input form' do 
@@ -32,17 +33,25 @@ describe 'category input form' do
 			login_as admin
 		end
 
-		it 'adds the category to the home page' do 
+		# it 'adds the category to the home page' do 
+		# 	visit '/categories/new'
+		# 	fill_in 'Title', with: 'Bio'
+		# 	fill_in 'Description', with: 'Lorem Ipsum'
+		# 	click_button 'Submit'
+		# 	expect(current_path).to eq categories_path
+		# 	expect(page).to have_content 'Bio'
+		# 	expect(page).to have_content 'Lorem Ipsum'
+		# end
+		it 'no longer adds the category to the home page if no image is included' do 
 			visit '/categories/new'
 			fill_in 'Title', with: 'Bio'
 			fill_in 'Description', with: 'Lorem Ipsum'
 			click_button 'Submit'
-			expect(current_path).to eq categories_path
-			expect(page).to have_content 'Bio'
-			expect(page).to have_content 'Lorem Ipsum'
+			expect(current_path).to eq new_category_path
+			expect(page).to have_content 'You must add an image'
 		end
 
-		it 'can add a photo to the category' do 
+		it 'can add category to the homepage with photo' do 
 			visit '/categories/new'
 			fill_in 'Title', with: 'Bio'
 			fill_in 'Description', with: 'Lorem Ipsum'
@@ -50,6 +59,7 @@ describe 'category input form' do
 			click_button 'Submit'
 			expect(current_path).to eq categories_path
 			expect(page).to have_content 'Bio'
+			expect(page).to have_content 'Lorem Ipsum'
 			expect(page).to have_css 'img.uploaded-pic'
 		end
 	end

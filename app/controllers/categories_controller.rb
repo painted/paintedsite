@@ -14,5 +14,8 @@ class CategoriesController < ApplicationController
 		@category = Category.new(params[:category].permit(:title, :description, :image))
 		@category.save!
 		redirect_to categories_path
+		rescue ActiveRecord::RecordInvalid
+			flash[:notice] = 'You must add an image'
+		redirect_to new_category_path
 	end 
 end
