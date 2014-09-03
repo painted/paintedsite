@@ -31,6 +31,7 @@ describe 'category input form' do
 			admin = Admin.create email: 's@s.com', password: '12345678', password_confirmation: '12345678'
 			login_as admin
 		end
+
 		it 'adds the category to the home page' do 
 			visit '/categories/new'
 			fill_in 'Title', with: 'Bio'
@@ -39,6 +40,17 @@ describe 'category input form' do
 			expect(current_path).to eq categories_path
 			expect(page).to have_content 'Bio'
 			expect(page).to have_content 'Lorem Ipsum'
+		end
+
+		it 'can add a photo to the category' do 
+			visit '/categories/new'
+			fill_in 'Title', with: 'Bio'
+			fill_in 'Description', with: 'Lorem Ipsum'
+			attach_file 'Image', Rails.root.join('spec/images/paintedicon.jpeg')
+			click_button 'Submit'
+			expect(current_path).to eq categories_path
+			expect(page).to have_content 'Bio'
+			expect(page).to have_css 'img.uploaded-pic'
 		end
 	end
 end
