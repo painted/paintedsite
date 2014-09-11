@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
+gem 'bootstrap-sass'
 
 # Use unicorn as the app server
 # gem 'unicorn'
