@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>PaintedSite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Painted Ltd. and Will Allen's Blog and portfolio site">
+    <meta name="author" content="Painted Ltd.">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Painted Ltd.</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Painted Ltd.</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+      <hr>
+
+      <footer>
+        <p>&copy; Painted Ltd. 2014</p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
 </html>
+
