@@ -1,9 +1,17 @@
-<% if @categories.any? %>
-	<% @categories.each do |category| %>
-		<%= image_tag category.image.url(:thumb), class: 'uploaded-pic' %><br>
-		<%= category.title %>
-		<%= category.description %>
+<div class='container'>
+	<% if @categories.any? %>
+		<div class='row'>
+			<% @categories.each do |category| %>
+			<div class='col-md-2'>
+				<%= image_tag category.image.url(:small), class: 'uploaded-pic' %><br>
+				<div class='title'>
+					<%= category.title %>
+					<%= category.description[1..15] %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	<% else %>
+		No categories yet
 	<% end %>
-<% else %>
-	No categories yet
-<% end %>
+</div>
