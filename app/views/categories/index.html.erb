@@ -6,7 +6,7 @@
 				<%= image_tag category.image.url(:small), class: 'uploaded-pic' %><br>
 				<div class='title'>
 					<%= category.title %>
-					<%= category.description[1..15] %>
+					<%= category.description[0..14] %>
 				</div>
 			</div>
 			<% end %>
