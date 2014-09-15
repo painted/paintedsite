@@ -32,6 +32,7 @@ gem 'devise'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'bootstrap-sass'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 # Use unicorn as the app server
 # gem 'unicorn'
