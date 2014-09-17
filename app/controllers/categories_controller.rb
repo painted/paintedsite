@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def create
-		@category = Category.new(params[:category].permit(:title, :description, :image))
+		@category = Category.new(params[:category].permit(:title, :description, :image, :url))
 		@category.save!
 		redirect_to categories_path
 		rescue ActiveRecord::RecordInvalid

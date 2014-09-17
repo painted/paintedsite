@@ -44,6 +44,7 @@ gem 'rails_12factor', group: :production
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :test, :development do
+	gem 'byebug'
 	gem 'rspec-rails'
 	gem 'capybara'
 end

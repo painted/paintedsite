@@ -60,7 +60,19 @@ describe 'category input form' do
 			expect(current_path).to eq categories_path
 			expect(page).to have_content 'Bio'
 			expect(page).to have_content 'Lorem Ipsum'
-			expect(page).to have_css 'img.uploaded-pic'
+			expect(page).to have_css('a', 'img.uploaded-pic') 
+		end
+
+		it 'can add a url as an image link' do 
+			visit '/categories/new'
+			fill_in 'Title', with: 'Bio'
+			fill_in 'Description', with: 'Lorem Ipsum'
+			attach_file 'Image', Rails.root.join('spec/images/paintedicon.jpeg')
+			fill_in 'Url', with: 'http://www.paintedltd.co.uk'
+			click_button 'Submit'
+			expect(current_path).to eq categories_path
+			find('a', 'uploaded-pic').click
+			expect(current_path).to eq 'http://www.paintedltd.co.uk'
 		end
 	end
 end
