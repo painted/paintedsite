@@ -70,9 +70,10 @@ describe 'category input form' do
 			attach_file 'Image', Rails.root.join('spec/images/paintedicon.jpeg')
 			fill_in 'Url', with: 'http://www.paintedltd.co.uk'
 			click_button 'Submit'
-			expect(current_path).to eq categories_path
-			find('a', 'uploaded-pic').click
-			expect(current_path).to eq 'http://www.paintedltd.co.uk'
+			within '.image-link' do 
+				find('a', 'uploaded-pic').click
+			end
+			expect(current_path).to eq '/'
 		end
 	end
 end
