@@ -31,4 +31,16 @@ describe Category do
 			expect(category.tags.length).to eq 2
 		end
 	end
+
+	describe 'tag already exists' do
+		before do 
+			Tag.create(name: 'yolo')
+		end 
+	
+		it 'reuses the existing tag' do
+			category.tag_names = 'yolo'
+			expect{ category.save! }.not_to raise_error
+			expect(Tag.count).to eq 1
+		end
+	end
 end

@@ -16,7 +16,7 @@ class Category < ActiveRecord::Base
 
 	def tag_names=(tag_list)
 		tag_list.split(', ').each do |tag|
-			tags.create(name: tag)
+			tags << Tag.find_or_create_by(name: tag)
 		end
 	end
 end
