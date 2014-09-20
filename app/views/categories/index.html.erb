@@ -10,6 +10,9 @@
 					<div class='mosaic-overlay details'>
 						<h4><%= category.title %></h4>
 						<p><%= category.description[0..14] %></p>
+						<p><% category.tags.each do |tag| %>
+							<%= link_to tag.name, '#' %>
+						<% end %></p>
 					</div>
 				</div>
 			</div>

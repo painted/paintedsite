@@ -33,13 +33,13 @@ describe Category do
 	end
 
 	describe 'tag already exists' do
-		before do 
-			Tag.create(name: 'yolo')
-		end 
+	
+		let!(:existing_tag){Tag.create(name: 'yolo')}
 	
 		it 'reuses the existing tag' do
 			category.tag_names = 'yolo'
 			expect{ category.save! }.not_to raise_error
+			expect(category.tags).to include existing_tag
 			expect(Tag.count).to eq 1
 		end
 	end
