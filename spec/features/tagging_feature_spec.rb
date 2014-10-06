@@ -20,5 +20,29 @@ describe 'tagging category with link' do
 			expect(page).to have_link 'yolo'
 			expect(page).to have_link 'swag'
 		end
+
+		it 'should filter categories by selected tag' do 
+
+			visit '/categories/new'
+			fill_in 'Title', with: 'Pic1'
+			fill_in 'Description', with: 'Lorem Ipsum'
+			attach_file 'Image', Rails.root.join('spec/images/paintedicon.jpeg')
+			fill_in 'Url', with: 'http://www.paintedltd.co.uk'
+			fill_in 'Tags', with: 'yolo'
+			click_button 'Submit'
+
+			visit '/categories/new'
+			fill_in 'Title', with: 'Pic2'
+			fill_in 'Description', with: 'Lorem Ipsum'
+			attach_file 'Image', Rails.root.join('spec/images/paintedicon.jpeg')
+			fill_in 'Url', with: 'http://www.paintedltd.co.uk'
+			fill_in 'Tags', with: 'swag'
+			click_button 'Submit'
+			
+			click_link 'yolo'
+			expect(page).to have_css 'h1', 'Categories associated with Yolo'
+			expect(page).to have_content 'Pic1'
+			expect(page).not_to have_content 'Pic2'
+		end
 	end 
 end

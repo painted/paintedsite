@@ -1,9 +1,9 @@
 require 'rails_helper'
 require 'test_helper'
 
-def test_image
-	Rack::Test::UploadedFile.new(Rails.root.join('spec/images/paintedicon.jpeg'), 'image/jpg')
-end
+# def test_image
+# 	Rack::Test::UploadedFile.new(Rails.root.join('spec/images/paintedicon.jpeg'), 'image/jpg')
+# end
 
 
 describe Category do

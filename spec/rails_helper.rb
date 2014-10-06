@@ -21,6 +21,10 @@ require 'aws'
 AWS.stub!
 AWS.config(:access_key_id => "TESTKEY", :secret_access_key => "TESTSECRET")
 
+def test_image
+  Rack::Test::UploadedFile.new(Rails.root.join('spec/images/paintedicon.jpeg'), 'image/jpg')
+end
+
 RSpec.configure do |config|
   config.include Warden::Test::Helpers
   Warden.test_mode!
