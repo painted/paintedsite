@@ -10,6 +10,10 @@ class CategoriesController < ApplicationController
 		@category = Category.new
 	end
 
+	def show
+		@category = Category.find_by_title params[:id]
+	end
+
 	def create
 		@category = Category.new(params[:category].permit(:title, :description, :image, :url, :tag_names))
 		@category.save!

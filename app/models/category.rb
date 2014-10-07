@@ -10,6 +10,7 @@ class Category < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 	validates_attachment :image, :presence => true
 	has_and_belongs_to_many :tags
+	validates :title, uniqueness: true
 
 	def tag_names
 		tags.map(&:name).join(', ')
@@ -19,5 +20,9 @@ class Category < ActiveRecord::Base
 		tag_list.split(',').each do |tag|
 			tags << Tag.find_or_create_by(name: tag)
 		end
+	end
+
+	def to_param
+		title
 	end
 end
