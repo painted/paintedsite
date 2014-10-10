@@ -14,6 +14,9 @@
 			<p><% category.tags.each do |tag| %>
 				<%= link_to tag.name, tag_path(tag) %>
 			<% end %></p>
+			<% unless category.address.blank? %>
+				<p><%= link_to 'Map', category_map_path(category), class: 'btn btn-success' %></p>
+			<% end %>
 		</div>
 	</div>
 </div>

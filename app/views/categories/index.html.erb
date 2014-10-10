@@ -1,8 +1,10 @@
 <div class='container'>
 	<% if @categories.any? %>
-		<div class='row'>
-			<%= render @categories %>
-		</div>
+		<% @categories.in_groups_of(6, false).each do |category_six| %>
+			<div class='row'>
+				<%= render category_six %>
+			</div>
+		<% end %>
 	<% else %>
 		No categories yet
 	<% end %>
