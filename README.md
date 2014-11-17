@@ -29,7 +29,8 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 
 	* Adding javascript to display text on rollover
 
-##Gems Used
+Gems Used
+----------
 	
 	[Devise]
 	[Bootstrap]
@@ -39,15 +40,15 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 	[Rails 12 Factor]
 	[Heroku Secrets]
 
-##Technologies Used
-
-	**Ruby**
-	**Rails**
-	**JQuery**
-	**Capybara**
-	**Poltergeist**
-	**RSPEC**
-	**Javascript**
+Technologies Used
+---------
+	* Ruby
+	* Rails
+	* JQuery
+	* Capybara
+	* Poltergeist
+	* RSPEC
+	* Javascript
 
 
 Please feel free to check out the current version in construction here: [Painted Ltd]
