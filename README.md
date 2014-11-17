@@ -32,27 +32,34 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 ========================
 ###Gems Used
 	
-	* Devise
-	* Bootstrap
-	* Amazon Web Services S3
-	* Paperclip
-	* Gmaps
-	* Rails 12 Factor
-	* Heroku Secrets
+	* [Devise]
+	* [Bootstrap]
+	* [Amazon Web Services S3]
+	* [Paperclip]
+	* [Gmaps]
+	* [Rails 12 Factor]
+	* [Heroku Secrets]
 
 ========================
 ###Technologies Used
 
-	* Ruby
-	* Rails
-	* JQuery
-	* Capybara
-	* Poltergeist
-	* RSPEC
-	* Javascript
+	**Ruby**
+	**Rails**
+	**JQuery**
+	**Capybara**
+	**Poltergeist**
+	**RSPEC**
+	**Javascript**
 
 
 Please feel free to check out the current version in construction here: [Painted Ltd]
 
 
 [Painted Ltd]:https://painted.herokuapp.com/
+[Devise]:https://github.com/plataformatec/devise
+[Bootstrap]:https://github.com/twbs/bootstrap-sass
+[Amazon Web Services S3]:http://aws.amazon.com/sdk-for-ruby/
+[Paperclip]:https://github.com/thoughtbot/paperclip
+[Gmaps]:http://hpneo.github.io/gmaps/
+[Rails 12 Factor]:https://github.com/heroku/rails_12factor
+[Heroku Secrets]:https://github.com/alexpeattie/heroku_secrets
