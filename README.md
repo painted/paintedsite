@@ -25,18 +25,32 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 
 ##Future Versions include:
 
-	*Improving layout and css
+	* Improving layout and css
 
-	*Adding javascript to display text on rollover
+	* Adding javascript to display text on rollover
+
+========================
+###Gems Used
+	
+	* Devise
+	* Bootstrap
+	* Amazon Web Services S3
+	* Paperclip
+	* Gmaps
+	* Rails 12 Factor
+	* Heroku Secrets
 
 ========================
 ###Technologies Used
 
-	*Devise
-	*Bootstrap
-	*Amazon Web Services S3
-	*Paperclip
-	*Gmaps
+	* Ruby
+	* Rails
+	* JQuery
+	* Capybara
+	* Poltergeist
+	* RSPEC
+	* Javascript
+
 
 Please feel free to check out the current version in construction here: [Painted Ltd]
 
