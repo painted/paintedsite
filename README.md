@@ -29,8 +29,7 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 
 	* Adding javascript to display text on rollover
 
-========================
-###Gems Used
+##Gems Used
 	
 	[Devise]
 	[Bootstrap]
@@ -40,8 +39,7 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 	[Rails 12 Factor]
 	[Heroku Secrets]
 
-========================
-###Technologies Used
+##Technologies Used
 
 	**Ruby**
 	**Rails**
