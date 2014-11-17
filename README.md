@@ -32,13 +32,13 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 ========================
 ###Gems Used
 	
-	* [Devise]
-	* [Bootstrap]
-	* [Amazon Web Services S3]
-	* [Paperclip]
-	* [Gmaps]
-	* [Rails 12 Factor]
-	* [Heroku Secrets]
+	[Devise]
+	[Bootstrap]
+	[Amazon Web Services S3]
+	[Paperclip]
+	[Gmaps]
+	[Rails 12 Factor]
+	[Heroku Secrets]
 
 ========================
 ###Technologies Used
