@@ -9,7 +9,7 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 
 ##Version 1 (Live):
 
-	Ability to post a new category.
+	Admin only ability to post a new category.
 
 ##Version 2 (Live):
 
@@ -30,6 +30,15 @@ This is a pet project that will become my portfolio and the site for Painted Ltd
 	*Adding javascript to display text on rollover
 
 ========================
+###Technologies Used
+
+	*Devise
+	*Bootstrap
+	*Amazon Web Services S3
+	*Paperclip
+	*Gmaps
+
+Please feel free to check out the current version in construction here: [Painted Ltd]
 
 
-
+[Painted Ltd]:https://painted.herokuapp.com/
